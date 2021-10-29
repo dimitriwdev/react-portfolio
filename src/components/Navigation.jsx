@@ -138,6 +138,7 @@ const useStyles = makeStyles(() => ({
     fontSize: '14px',
     textAlign: 'center',
     color: 'rgb(240, 240, 240)',
+    letterSpacing: '1px',
   },
 }))
 

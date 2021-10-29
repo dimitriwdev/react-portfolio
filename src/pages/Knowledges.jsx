@@ -1,7 +1,7 @@
 import React from 'react';
 import Navigation from '../components/Navigation';
-import Skills from "../components/Skills";
-import Tools from '../components/Tools';
+import Skills from "../components/knowledgesComponents/Skills";
+import Tools from '../components/knowledgesComponents/Tools';
 import bgMin from '../assets/bgMin.jpg';
 
 import Grid from '@material-ui/core/Grid';

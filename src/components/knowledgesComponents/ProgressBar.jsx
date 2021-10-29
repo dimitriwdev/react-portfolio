@@ -7,6 +7,7 @@ const useStyles = makeStyles(() => ({
     padding: '20px',
   },
   progressTitle: {
+    letterSpacing: '2px',
     whiteSpace: 'nowrap',
     marginTop: 0,
     marginBottom: '25px',

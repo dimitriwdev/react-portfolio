@@ -32,6 +32,8 @@ const useStyles = makeStyles(() => ({
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'flex-start',
+
+    letterSpacing: '2px',
     '@media (max-width: 1200px)': {
       padding: '150px 60px',
     },
@@ -44,10 +46,9 @@ const useStyles = makeStyles(() => ({
     },
   },
   name: {
-    fontFamily: 'Architects Daughter',
     fontSize: '60px',
     margin: 0,
-    letterSpacing: '4px',
+    letterSpacing: '3px',
     textShadow: '3px 6px 2px #000',
     textTransform: 'uppercase',
     '@media (max-width: 1130px)': {
@@ -101,7 +102,9 @@ const Home = () => {
           <h2 className={classes.name}>
             Dimitri Devoille
           </h2>
-          <h3 className={classes.role}>Junior React Front-End Developer</h3>
+          <h3 className={classes.role}>
+            Junior React Front-End Developer
+          </h3>
           <div>
             <a className={classes.pdf} href='./media/CV_Dimitri-Devoille.pdf' target='_blank' rel="noopener noreferrer">Download CV</a>
           </div>

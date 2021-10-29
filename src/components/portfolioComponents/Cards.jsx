@@ -10,6 +10,7 @@ const useStyles = makeStyles(() => ({
   card: {
     marginBottom: '20px',
     color: '#6BA1B9',
+    letterSpacing: '2px',
   },
   cardContent: {
     cursor: 'pointer',
@@ -27,6 +28,7 @@ const useStyles = makeStyles(() => ({
   },
   cardTitle: {
     fontSize: '18px',
+    letterSpacing: '2px',
   },
   cardImg: {
     width: '100%',
@@ -56,10 +58,9 @@ const Cards = (props) => {
   const [toggleModal, setToggleModal] = useState(false);
 
   const handleModalToggle = () => {
-    console.log(toggleModal);
     setToggleModal(!toggleModal)
   }
-  console.log('toggleModal default', toggleModal);
+
   return (
     <Grid container item xs={12} sm={6} lg={4} className={classes.card} onClick={handleModalToggle}>
       <Box

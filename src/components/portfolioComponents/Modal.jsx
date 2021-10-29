@@ -72,6 +72,7 @@ const useStyles = makeStyles(() => ({
   },
   modalTitle: {
     width: '100%',
+    letterSpacing: '2px',
     fontSize: '20px',
     '@media (max-width: 1200px)': {
       marginBottom: '40px',
@@ -108,6 +109,9 @@ const useStyles = makeStyles(() => ({
     '@media (max-width: 600px)': {
       width: '30%',
     },
+  },
+  visuallyHidden: {
+    display: 'none',
   },
   imageContainer: {
     width: '60%',
@@ -159,15 +163,19 @@ const Modal = (props) => {
               <Link
                 to={{ pathname: `${card.github}` }}
                 target="_blank"
+                rel='noopener noreferrer'
                 className={classes.link}
               >
+                <span className={classes.visuallyHidden}>github</span>
                 <GitHubIcon className={classes.icon} />
               </Link>
               <Link
                 to={{ pathname: `${card.app}` }}
                 target="_blank"
+                rel='noopener noreferrer'
                 className={classes.link}
               >
+                <span className={classes.visuallyHidden}>app</span>
                 <LaptopMacIcon className={classes.icon} />
               </Link>
             </div>

@@ -10,7 +10,7 @@ const useStyles = makeStyles(() => ({
   card: {
     marginBottom: '20px',
     color: '#6BA1B9',
-    letterSpacing: '2px',
+    letterSpacing: '1px',
   },
   cardContent: {
     cursor: 'pointer',

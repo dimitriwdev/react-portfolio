@@ -20,6 +20,10 @@ const useStyles = makeStyles(() => ({
   socialIcon: {
     color: '#6BA1B9',
     transform: 'scale(1.5)',
+    transition: '0.2s ease',
+    '&:hover': {
+      color: 'rgb(240, 240, 240)',
+    },
   },
 }))
 

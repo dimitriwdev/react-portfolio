@@ -9,6 +9,7 @@ library.add(fas, fab);
 
 const useStyles = makeStyles(() => ({
   toolsTitle: {
+    letterSpacing: '2px',
     fontSize: '18px',
     marginBottom: '25px',
     padding: '20px 20px 0 20px',

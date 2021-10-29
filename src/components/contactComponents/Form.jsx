@@ -45,7 +45,8 @@ const useStyles = makeStyles(() => ({
     color: 'rgb(240, 240, 240)',
   },
   inputField: {
-    fontSize: '15px',
+    fontSize: '18px',
+    fontFamily: 'Josefin Sans',
     padding: '15px',
     marginBottom: '25px',
     backgroundColor: 'rgba(2, 37, 51, 0.5)',
@@ -62,7 +63,8 @@ const useStyles = makeStyles(() => ({
     },
   },
   textarea: {
-    fontSize: '15px',
+    fontSize: '18px',
+    fontFamily: 'Josefin Sans',
     padding: '15px',
     backgroundColor: 'rgba(2, 37, 51, 0.5)',
     color: 'rgb(240, 240, 240)',

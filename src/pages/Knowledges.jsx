@@ -2,7 +2,7 @@ import React from 'react';
 import Navigation from '../components/Navigation';
 import Skills from "../components/Skills";
 import Tools from '../components/Tools';
-import bg from '../assets/bg.jpg';
+import bgMin from '../assets/bgMin.jpg';
 
 import Grid from '@material-ui/core/Grid';
 import { makeStyles } from '@material-ui/core/styles';
@@ -12,7 +12,7 @@ const useStyles = makeStyles(() => ({
     width: '100%',
     minHeight: '100vh',
     display: 'flex',
-    background: `linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)),url(${bg})`,
+    background: `linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)),url(${bgMin})`,
     // Photo by Karsten Würth on unsplash
     backgroundPosition: 'center',
     backgroundSize: 'cover',

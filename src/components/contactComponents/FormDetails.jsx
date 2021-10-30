@@ -40,11 +40,8 @@ const useStyles = makeStyles(() => ({
   },
   detailsContent: {
     letterSpacing: '1px',
-    fontSize: '20px',
+    fontSize: '25px',
     '@media (max-width: 1200px)': {
-      fontSize: '15px',
-    },
-    '@media (max-width: 600px)': {
       fontSize: '20px',
     },
   },
@@ -74,7 +71,14 @@ const useStyles = makeStyles(() => ({
     top: '40%',
     left: '50%',
     display: 'none',
+    fontFamily: 'Josefin sans',
     fontSize: '10px',
+    textAlign: 'center',
+    '@media (max-width: 900px)': {
+      top: '10%',
+      left: '60%',
+      padding: '5px',
+    },
   },
 }))
 

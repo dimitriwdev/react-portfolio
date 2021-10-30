@@ -28,7 +28,7 @@ const useStyles = makeStyles(() => ({
   formTitle: {
     letterSpacing: '2px',
     width: '100%',
-    fontSize: '18px',
+    fontSize: '25px',
     marginBottom: '25px',
   },
   form: {
@@ -38,7 +38,7 @@ const useStyles = makeStyles(() => ({
     justifyContent: 'center',
   },
   label: {
-    fontSize: '14px',
+    fontSize: '16px',
     marginBottom: '10px',
     letterSpacing: '1px',
     paddingLeft: '5px',
@@ -180,7 +180,7 @@ const Form = () => {
 
   return (
     <div className={classes.formContainer}>
-      <h2 className={classes.formTitle}>Contact me !</h2>
+      <h2 className={classes.formTitle}>Contact</h2>
       <form className={classes.form} ref={form} onSubmit={sendEmail}>
         <label htmlFor='name' className={classes.label}>Name</label>
         <input

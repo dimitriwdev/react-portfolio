@@ -11,10 +11,10 @@ const useStyles = makeStyles(() => ({
     whiteSpace: 'nowrap',
     marginTop: 0,
     marginBottom: '25px',
-    fontSize: '18px',
+    fontSize: '25px',
   },
   years: {
-    fontSize: '12px',
+    fontSize: '16px',
     display: 'flex',
     justifyContent: 'space-between',
     color: 'rgb(240, 240, 240)',
@@ -29,7 +29,7 @@ const useStyles = makeStyles(() => ({
       content: '""',
       background: 'rgba(107, 161, 185, 0.5)',
       position: 'absolute',
-      height: '190px',
+      height: '203px',
       width: '1px',
       transform: 'translate(9px, 19px)',
     },
@@ -47,7 +47,7 @@ const useStyles = makeStyles(() => ({
   skillItem: {
     listStyle: 'none',
     paddingTop: '10px',
-    fontSize: '16px',
+    fontSize: '20px',
   },
   progressBarStyle: {
     height: '4px',

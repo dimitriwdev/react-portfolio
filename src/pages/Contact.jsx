@@ -17,7 +17,7 @@ const useStyles = makeStyles(() => ({
     backgroundRepeat: 'no-repeat',
     backgroundAttachment: 'fixed',
     color: '#6BA1B9',
-    fontFamily: 'Architects Daughter',
+    fontFamily: 'Caveat',
     '@media (max-width: 900px)': {
       flexDirection: 'column',
     },

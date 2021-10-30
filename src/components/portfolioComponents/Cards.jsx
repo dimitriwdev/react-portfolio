@@ -18,36 +18,47 @@ const useStyles = makeStyles(() => ({
     transition: '0.2s',
     borderRadius: '10px 10px 10px 0px',
     '&:hover': {
-      backgroundColor: 'rgba(2, 37, 51, 0.75)',
-    },
-    '@media (max-width: 600px)': {
-      '&:hover': {
-        backgroundColor: 'rgba(17, 32, 38, 0)',
+      '& $cardImgOverlay': {
+        backgroundColor: 'transparent',
+      },
+      '& $cardTitle': {
+        color: 'rgb(240, 240, 240)',
       },
     },
   },
   cardTitle: {
-    fontSize: '18px',
+    fontSize: '25px',
     letterSpacing: '2px',
   },
+
   cardImg: {
     width: '100%',
     height: '150px',
     borderRadius: '5px',
-    backgroundColor: 'rgba(240, 240, 240, 0.1)',
-    margin: '25px 0',
+    margin: '10px 0',
     '@media (max-width: 600px)': {
       height: '170px',
     },
   },
+  cardImgOverlay: {
+    width: '100%',
+    height: '100%',
+    borderRadius: '5px',
+    backgroundColor: 'rgba(2, 37, 51, 0.3)',
+    margin: '10px 0',
+    transition: '0.3s ease',
+    '@media (max-width: 600px)': {
+      backgroundColor: 'rgba(2, 37, 51, 0.2)',
+    },
+  },
   moreBtn: {
     fontStyle: 'italic',
-    fontSize: '12px',
+    fontSize: '16px',
     padding: '5px',
   },
   ellipsisText: {
-    padding: '5px',
-    fontSize: '16px',
+    padding: '0 5px',
+    fontSize: '20px',
     color: 'rgb(240, 240, 240)',
   },
 }))
@@ -57,15 +68,12 @@ const Cards = (props) => {
   const { card } = props;
   const [toggleModal, setToggleModal] = useState(false);
 
-  const handleModalToggle = () => {
-    setToggleModal(!toggleModal)
-  }
-
   return (
-    <Grid container item xs={12} sm={6} lg={4} className={classes.card} onClick={handleModalToggle}>
+    <Grid container item xs={12} sm={6} lg={4} className={classes.card}>
       <Box
         display="flex"
         justifyContent="center"
+        onClick={() => setToggleModal(true)}
       >
         <Grid container item xs={12} sm={10} lg={10} className={classes.cardContent}>
           <Grid item xs={12}><h2 className={classes.cardTitle}>{card.name}</h2></Grid>
@@ -78,7 +86,10 @@ const Cards = (props) => {
                 backgroundRepeat: 'no-repeat',
               }}
               className={classes.cardImg}
-            />
+            >
+              <div className={classes.cardImgOverlay}>
+              </div>
+            </div>
           </Grid>
           <Grid item xs={12} >
             <LinesEllipsis
@@ -88,16 +99,16 @@ const Cards = (props) => {
               maxLine={2}
             />
             <span className={classes.moreBtn}>See more</span>
-            {toggleModal &&
-              <Modal
-                card={card}
-                open
-                onClick={handleModalToggle}
-              />
-            }
           </Grid>
+
         </Grid>
       </Box>
+      {toggleModal &&
+        <Modal
+          card={card}
+          closeModal={setToggleModal}
+        />
+      }
     </Grid>
   )
 }

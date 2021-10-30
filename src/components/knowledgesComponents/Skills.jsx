@@ -1,22 +1,22 @@
-import React, { useState } from "react";
+import React from "react";
 import ProgressBar from "./ProgressBar";
 
 import Grid from '@material-ui/core/Grid';
 
 const Skills = () => {
-  const [languages, setLanguages] = useState([
+  const languages = [
     { id: 1, value: "Javascript", xp: 2 },
     { id: 2, value: "TypeScript", xp: 0.5 },
     { id: 3, value: "css", xp: 2 },
     { id: 4, value: "html", xp: 2 }
-  ]);
+  ];
 
-  const [frameworks, setFrameworks] = useState([
+  const frameworks = [
     { id: 5, value: "React", xp: 1 },
     { id: 6, value: "Redux", xp: 1 },
     { id: 7, value: "Material UI", xp: 1 },
     { id: 8, value: "Axios", xp: 1 }
-  ]);
+  ];
 
   return (
     <Grid container>

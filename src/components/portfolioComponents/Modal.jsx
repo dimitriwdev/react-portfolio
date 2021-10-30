@@ -16,10 +16,12 @@ const useStyles = makeStyles(() => ({
     display: 'flex',
     justifyContent: 'flex-end',
     cursor: 'auto',
+    zIndex: 1,
   },
   modal: {
     position: 'relative',
     width: '50%',
+    fontFamily: 'josefin sans',
     backgroundColor: 'rgba(2, 37, 51, 0.99)',
     padding: '40px',
     display: 'flex',
@@ -31,8 +33,12 @@ const useStyles = makeStyles(() => ({
   },
   closeIcon: {
     position: 'absolute',
+    color: 'rgb(240, 240, 240)',
     top: '40px',
     right: '40px',
+    padding: '10px',
+    backgroundColor: 'transparent',
+    border: 'none',
     transition: '0.2s',
     '&:hover': {
       color: '#6BA1B9',
@@ -73,6 +79,7 @@ const useStyles = makeStyles(() => ({
   modalTitle: {
     width: '100%',
     letterSpacing: '2px',
+    fontWeight: 300,
     fontSize: '20px',
     '@media (max-width: 1200px)': {
       marginBottom: '40px',
@@ -140,26 +147,25 @@ const useStyles = makeStyles(() => ({
     },
   },
   modalDesc: {
-    fontSize: '20px',
+    fontSize: '18px',
+    fontWeight: 300,
     color: 'rgb(240, 240, 240)',
+    lineHeight: 2,
   },
 }))
 
 const Modal = (props) => {
   const classes = useStyles();
-  const { card } = props;
+  const { card, closeModal } = props;
 
-  const handleClick = () => {
-
-  }
   return (
     <div className={classes.modalContainer}>
       <div className={classes.modal}>
-        <CloseIcon className={classes.closeIcon} />
+        <button className={classes.closeIcon} onClick={() => closeModal(false)}><CloseIcon /></button>
         <div className={classes.modalTopRow}>
           <div className={classes.modalTopLeft}>
             <h2 className={classes.modalTitle}>{card.name}</h2>
-            <div className={classes.linkContainer} onClick={handleClick}>
+            <div className={classes.linkContainer}>
               <Link
                 to={{ pathname: `${card.github}` }}
                 target="_blank"
@@ -194,7 +200,6 @@ const Modal = (props) => {
         </div>
         <div className={classes.modalBottomRow}>
           <p className={classes.modalDesc}>{card.desc}</p>
-
         </div>
       </div>
     </div >

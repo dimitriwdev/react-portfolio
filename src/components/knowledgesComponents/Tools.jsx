@@ -10,7 +10,7 @@ library.add(fas, fab);
 const useStyles = makeStyles(() => ({
   toolsTitle: {
     letterSpacing: '2px',
-    fontSize: '18px',
+    fontSize: '25px',
     marginBottom: '25px',
     padding: '20px 20px 0 20px',
   },
@@ -31,7 +31,7 @@ const useStyles = makeStyles(() => ({
   },
   toolSpan: {
     textAlign: 'left',
-    fontSize: '18px',
+    fontSize: '23px',
     '@media (max-width: 600px)': {
       textAlign: 'left',
     },

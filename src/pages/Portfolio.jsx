@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import Navigation from '../components/Navigation';
 import bgMin from '../assets/bgMin.jpg';
 import weatherApp from '../assets/portfolioImages/weatherApp.png';
@@ -23,6 +23,7 @@ const useStyles = makeStyles(() => ({
     backgroundSize: 'cover',
     backgroundRepeat: 'no-repeat',
     backgroundAttachment: 'fixed',
+    fontFamily: 'Caveat',
     color: '#6BA1B9',
     '@media (max-width: 900px)': {
       flexDirection: 'column',
@@ -38,47 +39,57 @@ const useStyles = makeStyles(() => ({
 
 const Portfolio = () => {
   const classes = useStyles();
-  const appDetails = {
-    weatherDetails: {
-      appLink: 'https://youthful-boyd-82c6e3.netlify.app/',
-      githubLink: 'https://github.com/dimitriwdev/react-weather-app',
-      description: 'Weather application built with react, openweatherapi, geolocation feature, custom hooks, material-ui and hidden variables.',
-    },
-    chatDetails: {
-      appLink: 'https://compassionate-poitras-eec308.netlify.app/',
-      githubLink: 'https://github.com/dimitriwdev/react-chat-app',
-      description: 'Chat application created with react, react-chat-engine and axios.',
-    },
-    nasaDetails: {
-      appLink: 'https://pensive-mahavira-7a814d.netlify.app/',
-      githubLink: 'https://github.com/dimitriwdev/react-nasa-app',
-      description: 'React app built using nasa api, axios, react-lines-ellipsis, modal box and material-ui.',
-    },
-    countdownDetails: {
-      appLink: 'https://hungry-engelbart-834cad.netlify.app/',
-      githubLink: 'https://github.com/dimitriwdev/react-countdown',
-      description: 'Countdown application created with react, react-datepiker and dayjs.',
-    },
-    todoDetails: {
-      appLink: 'https://friendly-gates-5170e3.netlify.app/',
-      githubLink: 'https://github.com/dimitriwdev/react-todo-app',
-      description: 'Todo application built with react and local storage.',
-    },
-    movieDetails: {
-      appLink: 'https://confident-roentgen-9f6e2f.netlify.app/',
-      githubLink: 'https://github.com/dimitriwdev/react-movie-db',
-      description: 'React movie application using tmdb api and react-router-dom',
-    },
-  }
 
-  const [cards, setCards] = useState([
-    { id: 1, name: 'Weather App', desc: `${appDetails.weatherDetails.description}`, img: `${weatherApp}`, github: `${appDetails.weatherDetails.githubLink}`, app: `${appDetails.weatherDetails.appLink}` },
-    { id: 2, name: 'Chat App', desc: `${appDetails.chatDetails.description}`, img: `${chatApp}`, github: `${appDetails.chatDetails.githubLink}`, app: `${appDetails.chatDetails.appLink}` },
-    { id: 3, name: 'Nasa App', desc: `${appDetails.nasaDetails.description}`, img: `${nasaApp}`, github: `${appDetails.nasaDetails.githubLink}`, app: `${appDetails.nasaDetails.appLink}` },
-    { id: 4, name: 'Countdown App', desc: `${appDetails.countdownDetails.description}`, img: `${countdownApp}`, github: `${appDetails.countdownDetails.githubLink}`, app: `${appDetails.countdownDetails.appLink}` },
-    { id: 5, name: 'Todo App', desc: `${appDetails.todoDetails.description}`, img: `${todoApp}`, github: `${appDetails.todoDetails.githubLink}`, app: `${appDetails.todoDetails.appLink}` },
-    { id: 6, name: 'MovieDB', desc: `${appDetails.movieDetails.description}`, img: `${movieDb}`, github: `${appDetails.movieDetails.githubLink}`, app: `${appDetails.movieDetails.appLink}` },
-  ]);
+  const cards = [
+    {
+      id: 1,
+      name: 'Weather App',
+      desc: 'Weather application built with React, openWeatherApi, geolocation based on custom hook, Material-ui and hidden variables.',
+      img: `${weatherApp}`,
+      github: 'https://github.com/dimitriwdev/react-weather-app',
+      app: 'https://youthful-boyd-82c6e3.netlify.app/'
+    },
+    {
+      id: 2,
+      name: 'Chat App',
+      desc: 'Chat application created with React, React-chat-engine and Axios.',
+      img: `${chatApp}`,
+      github: 'https://github.com/dimitriwdev/react-chat-app',
+      app: 'https://compassionate-poitras-eec308.netlify.app/'
+    },
+    {
+      id: 3,
+      name: 'Nasa App',
+      desc: 'React app built using Nasa Api, Axios, React-lines-ellipsis, modal box and Material-ui.',
+      img: `${nasaApp}`,
+      github: 'https://github.com/dimitriwdev/react-nasa-app',
+      app: 'https://pensive-mahavira-7a814d.netlify.app/'
+    },
+    {
+      id: 4,
+      name: 'Countdown App',
+      desc: 'Countdown application created with React, React-datepiker and DayJs.',
+      img: `${countdownApp}`,
+      github: 'https://github.com/dimitriwdev/react-countdown',
+      app: 'https://hungry-engelbart-834cad.netlify.app/'
+    },
+    {
+      id: 5,
+      name: 'Todo App',
+      desc: 'Todo application built with React and local storage.',
+      img: `${todoApp}`,
+      github: 'https://github.com/dimitriwdev/react-todo-app',
+      app: 'https://friendly-gates-5170e3.netlify.app/'
+    },
+    {
+      id: 6,
+      name: 'MovieDB',
+      desc: 'React movie application using TMDB Api and React-router-dom.',
+      img: `${movieDb}`,
+      github: 'https://github.com/dimitriwdev/react-movie-db',
+      app: 'https://confident-roentgen-9f6e2f.netlify.app/'
+    },
+  ];
 
   return (
     <div className={classes.portfolio}>

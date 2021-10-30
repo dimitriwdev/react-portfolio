@@ -7,7 +7,7 @@ import AspectRatioIcon from '@material-ui/icons/AspectRatio';
 import PermContactCalendarIcon from '@material-ui/icons/PermContactCalendar';
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import GitHubIcon from '@material-ui/icons/GitHub';
-import pic from '../assets/pic.png';
+import profilePicture from '../assets/profile.png';
 
 const useStyles = makeStyles(() => ({
   sidebar: {
@@ -18,6 +18,7 @@ const useStyles = makeStyles(() => ({
     display: 'flex',
     flexDirection: 'column',
     justifyContent: 'space-between',
+    fontFamily: 'Caveat',
     '@media (max-width: 1130px)': {
       margin: 0,
     },
@@ -43,8 +44,7 @@ const useStyles = makeStyles(() => ({
   },
   profile: {
     marginTop: '10px',
-    fontSize: '25px',
-    textTransform: 'uppercase',
+    fontSize: '30px',
   },
   navigation: {
     boxSizing: 'border-box',
@@ -88,7 +88,7 @@ const useStyles = makeStyles(() => ({
     },
   },
   navigationLink: {
-    fontSize: '20px',
+    fontSize: '25px',
     display: 'inline-block',
     transition: '0.2s',
     '&:hover': {
@@ -151,7 +151,7 @@ const Navigation = () => {
   return (
     <div className={classes.sidebar}>
       <header className={classes.idContent}>
-        <img className={classes.profileImg} src={pic} alt='profile' />
+        <img className={classes.profileImg} src={profilePicture} alt='profile' />
         <h1 className={classes.profile}>{profile}</h1>
       </header>
       <nav>

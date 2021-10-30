@@ -29,6 +29,7 @@ const useStyles = makeStyles(() => ({
   },
   content: {
     padding: '150px 100px',
+    fontFamily: 'Caveat', // // // //
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'flex-start',
@@ -46,11 +47,10 @@ const useStyles = makeStyles(() => ({
     },
   },
   name: {
-    fontSize: '60px',
+    fontSize: '50px',
     margin: 0,
     letterSpacing: '3px',
     textShadow: '3px 6px 2px #000',
-    textTransform: 'uppercase',
     '@media (max-width: 1130px)': {
       fontSize: '40px',
     },

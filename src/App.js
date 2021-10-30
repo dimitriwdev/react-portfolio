@@ -1,3 +1,4 @@
+import React from 'react';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import Home from './pages/Home';
 import Knowledges from './pages/Knowledges';
@@ -6,6 +7,7 @@ import Contact from './pages/Contact';
 import PageNotFound from './pages/PageNotFound';
 
 const App = () => {
+
   return (
     <div className='App'>
       <BrowserRouter>

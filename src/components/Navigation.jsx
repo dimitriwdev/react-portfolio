@@ -30,6 +30,10 @@ const useStyles = makeStyles(() => ({
     },
   },
   idContent: {
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'start',
+    alignItems: 'center',
     marginTop: '20px',
     textAlign: 'center',
     '@media (max-width: 900px)': {
@@ -144,7 +148,6 @@ const useStyles = makeStyles(() => ({
 
 const Navigation = () => {
   const classes = useStyles();
-
   const year = new Date().getFullYear();
   const profile = 'Dimitri Devoille';
 

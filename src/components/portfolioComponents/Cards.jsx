@@ -42,9 +42,9 @@ const useStyles = makeStyles(() => ({
   },
   cardImgOverlay: {
     width: '100%',
-    height: '100%',
+    height: '150px',
     borderRadius: '5px',
-    backgroundColor: 'rgba(2, 37, 51, 0.3)',
+    backgroundColor: 'rgba(2, 37, 51, 0.35)',
     margin: '10px 0',
     transition: '0.3s ease',
     '@media (max-width: 600px)': {

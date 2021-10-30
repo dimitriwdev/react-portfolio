@@ -29,7 +29,7 @@ const useStyles = makeStyles(() => ({
   },
   content: {
     padding: '150px 100px',
-    fontFamily: 'Caveat', // // // //
+    fontFamily: 'Caveat',
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'flex-start',

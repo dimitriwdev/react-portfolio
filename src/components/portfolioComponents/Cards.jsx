@@ -49,6 +49,7 @@ const useStyles = makeStyles(() => ({
     transition: '0.3s ease',
     '@media (max-width: 600px)': {
       backgroundColor: 'rgba(2, 37, 51, 0.2)',
+      height: '170px',
     },
   },
   moreBtn: {

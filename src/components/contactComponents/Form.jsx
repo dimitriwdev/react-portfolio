@@ -4,6 +4,7 @@ import ReCAPTCHA from 'react-google-recaptcha';
 import { makeStyles } from '@material-ui/core/styles';
 import MailOutlineIcon from '@material-ui/icons/MailOutline';
 import CheckIcon from '@material-ui/icons/Check';
+import { useTranslation } from "react-i18next";
 
 const useStyles = makeStyles(() => ({
   formDetailsContainer: {
@@ -146,6 +147,7 @@ const useStyles = makeStyles(() => ({
 const Form = () => {
   const classes = useStyles();
   const form = useRef();
+  const { t } = useTranslation();
 
   const [result, setResult] = useState(false);
   const [isVerified, setIsVerified] = useState(false);
@@ -182,7 +184,7 @@ const Form = () => {
     <div className={classes.formContainer}>
       <h2 className={classes.formTitle}>Contact</h2>
       <form className={classes.form} ref={form} onSubmit={sendEmail}>
-        <label htmlFor='name' className={classes.label}>Name</label>
+        <label htmlFor='name' className={classes.label}>{t('Name')}</label>
         <input
           type='text'
           name='name'
@@ -190,7 +192,7 @@ const Form = () => {
           className={classes.inputField}
           required
         />
-        <label htmlFor='email' className={classes.label}>Email</label>
+        <label htmlFor='email' className={classes.label}>{t('Email')}</label>
         <input
           type='email'
           name='email'
@@ -198,7 +200,7 @@ const Form = () => {
           className={classes.inputField}
           required
         />
-        <label htmlFor='message' className={classes.label}>Message</label>
+        <label htmlFor='message' className={classes.label}>{t('Message')}</label>
         <textarea
           name='message'
           rows="5"

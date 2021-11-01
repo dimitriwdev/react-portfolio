@@ -5,6 +5,7 @@ import { library } from "@fortawesome/fontawesome-svg-core";
 import { fas } from "@fortawesome/free-solid-svg-icons";
 import { fab } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { useTranslation } from "react-i18next";
 library.add(fas, fab);
 
 const useStyles = makeStyles(() => ({
@@ -40,14 +41,13 @@ const useStyles = makeStyles(() => ({
 
 const Tools = () => {
   const classes = useStyles();
-
-  const title = 'Tools';
+  const { t } = useTranslation();
 
   return (
 
     <Grid container className={classes.tools}>
       <Grid item xs={12}>
-        <h2 className={classes.toolsTitle}>{title}</h2>
+        <h2 className={classes.toolsTitle}>{t('Tools')}</h2>
       </Grid>
       <Grid container item xs={6} className={classes.toolListContainer}>
         <Grid container item xs={12} lg={8} className={classes.toolList}>

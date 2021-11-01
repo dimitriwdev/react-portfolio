@@ -1,9 +1,12 @@
 import React from "react";
 import ProgressBar from "./ProgressBar";
 
+import { useTranslation } from "react-i18next";
 import Grid from '@material-ui/core/Grid';
 
 const Skills = () => {
+  const { t } = useTranslation();
+
   const languages = [
     { id: 1, value: "Javascript", xp: 2 },
     { id: 2, value: "TypeScript", xp: 0.5 },
@@ -23,13 +26,13 @@ const Skills = () => {
       <Grid container item xs={12} sm={6} >
         <ProgressBar
           skillLists={languages}
-          title="Languages"
+          title={t('Languages')}
         />
       </Grid>
       <Grid container item xs={12} sm={6} >
         <ProgressBar
           skillLists={frameworks}
-          title="Framworks & Libraries"
+          title={t('FrameworksAndLibraries')}
         />
       </Grid>
     </Grid>

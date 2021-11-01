@@ -1,6 +1,7 @@
 import React from "react";
 import { makeStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
+import { useTranslation } from "react-i18next";
 
 const useStyles = makeStyles(() => ({
   progress: {
@@ -72,16 +73,17 @@ const useStyles = makeStyles(() => ({
 }))
 
 const ProgressBar = (props) => {
-  const classes = useStyles();
   const { title, skillLists } = props;
+  const classes = useStyles();
+  const { t } = useTranslation();
 
   return (
     <Grid item xs={12} lg={8} className={classes.progress}>
       <h2 className={classes.progressTitle}>{title}</h2>
       <div className={classes.years}>
-        <span className={classes.yearsExp}>Years of experience</span>
-        <span className={`${classes.yearsColumn} ${classes.yearsOne}`}>1 yr</span>
-        <span className={`${classes.yearsColumn} ${classes.yearsTwo}`}>2 yrs</span>
+        <span className={classes.yearsExp}>{t('ExperienceYears')}</span>
+        <span className={`${classes.yearsColumn} ${classes.yearsOne}`}>1 {t('yr')}</span>
+        <span className={`${classes.yearsColumn} ${classes.yearsTwo}`}>2 {t('yrs')}</span>
       </div>
       <ul className={classes.skillList}>
         {skillLists.map((skillList) => {

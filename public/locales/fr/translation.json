@@ -1,0 +1,34 @@
+{
+  "Home": "Acceuil",
+  "Knowledges": "Connaissances",
+  "Portfolio": "Projets",
+  "Contact": "Contact",
+  
+  "Role": "Junior Front-End Developpeur React ",
+  "CV": "Télécharger CV",
+
+  "Languages": "Langages",
+  "FrameworksAndLibraries": "Frameworks & bibliothèques",
+  "ExperienceYears": "Annees d'experience",
+  "yr": "an",
+  "yrs": "ans",
+  "Tools": "Outils",
+
+  "WeatherApp": "App Météo",
+  "ChatApp": "App de discussion",
+  "NasaApp": "App Nasa",
+  "CountdownApp": "App Compte à rebours",
+  "TodoApp": "App Todo",
+  "MovieDB": "App Film",
+
+  "WeatherAppDesc": "Application Météo crée avec React, openWeatherApi, geolocation basée un custom hook et Material-ui.",
+  "ChatAppDesc": "Application de Chat crée avec React, React-chat-engine et Axios.",
+  "NasaAppDesc": "Application React crée avec un Api de la Nasa, Axios, React-lines-ellipsis, modale et Material-ui.",
+  "CountdownAppDesc": "Application Compte à rebours crée avec React, React-datepiker et DayJs.",
+  "TodoAppDesc": "Application Todo crée avec React et local storage.",
+  "MovieDbAppDesc": "Application de Film basee sur TMDB Api crée avec React et React-router-dom.",
+
+  "Name": "Nom",
+  "Email": "Email",
+  "Message": "Message"
+}

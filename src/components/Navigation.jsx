@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import { NavLink } from 'react-router-dom';
 import HomeIcon from '@material-ui/icons/Home';
@@ -8,6 +8,9 @@ import PermContactCalendarIcon from '@material-ui/icons/PermContactCalendar';
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import GitHubIcon from '@material-ui/icons/GitHub';
 import profilePicture from '../assets/profile.png';
+import { useTranslation } from "react-i18next";
+import { useSelector, useDispatch } from "react-redux";
+import allActions from "../actions";
 
 const useStyles = makeStyles(() => ({
   sidebar: {
@@ -49,6 +52,11 @@ const useStyles = makeStyles(() => ({
   profile: {
     marginTop: '10px',
     fontSize: '30px',
+  },
+  spanLanguages: {
+    margin: '15px',
+    cursor: 'pointer',
+    fontSize: '20px',
   },
   navigation: {
     boxSizing: 'border-box',
@@ -151,36 +159,49 @@ const Navigation = () => {
   const year = new Date().getFullYear();
   const profile = 'Dimitri Devoille';
 
+  const language = useSelector((state) => state.languageReducers);
+  const { t, i18n } = useTranslation();
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    i18n.changeLanguage(language);
+  }, [language, i18n]);
+
+
   return (
     <div className={classes.sidebar}>
       <header className={classes.idContent}>
         <img className={classes.profileImg} src={profilePicture} alt='profile' />
         <h1 className={classes.profile}>{profile}</h1>
+        <div className={classes.languages}>
+          <span className={classes.spanLanguages} onClick={() => dispatch(allActions.languageActions.setEnglish("en"))}>en</span>
+          <span className={classes.spanLanguages} onClick={() => dispatch(allActions.languageActions.setFrench("fr"))}>fr</span>
+        </div>
       </header>
       <nav>
         <ul className={classes.navigation}>
           <li className={classes.navItem}>
             <NavLink exact to='/' className={classes.link} activeClassName={classes.navActive}>
               <HomeIcon className={classes.icon} />
-              <span className={classes.navigationLink}>Home</span>
+              <span className={classes.navigationLink}>{t('Home')}</span>
             </NavLink>
           </li>
           <li className={classes.navItem}>
             <NavLink exact to='/knowledges' className={classes.link} activeClassName={classes.navActive}>
               <BarChartIcon className={classes.icon} />
-              <span className={classes.navigationLink}>Knowledges</span>
+              <span className={classes.navigationLink}>{t('Knowledges')}</span>
             </NavLink>
           </li>
           <li className={classes.navItem}>
             <NavLink exact to='/portfolio' className={classes.link} activeClassName={classes.navActive}>
               <AspectRatioIcon className={classes.icon} />
-              <span className={classes.navigationLink}>Portfolio</span>
+              <span className={classes.navigationLink}>{t('Portfolio')}</span>
             </NavLink>
           </li>
           <li className={classes.navItem}>
             <NavLink exact to='/contact' className={classes.link} activeClassName={classes.navActive}>
               <PermContactCalendarIcon className={classes.icon} />
-              <span className={classes.navigationLink}>Contact</span>
+              <span className={classes.navigationLink}>{t('Contact')}</span>
             </NavLink>
           </li>
         </ul>

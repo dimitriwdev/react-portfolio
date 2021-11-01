@@ -2,6 +2,7 @@ import React from 'react';
 import Navigation from '../components/Navigation';
 import bgMin from '../assets/bgMin.jpg';
 
+import { useTranslation } from "react-i18next";
 import { makeStyles } from '@material-ui/core/styles';
 
 const useStyles = makeStyles(() => ({
@@ -92,6 +93,7 @@ const useStyles = makeStyles(() => ({
 
 const Home = () => {
   const classes = useStyles();
+  const { t } = useTranslation();
 
   return (
     <div className={classes.home}>
@@ -102,10 +104,10 @@ const Home = () => {
             Dimitri Devoille
           </h2>
           <h3 className={classes.role}>
-            Junior React Front-End Developer
+            {t('Role')}
           </h3>
           <div>
-            <a className={classes.pdf} href='./media/CV_Dimitri-Devoille.pdf' target='_blank' rel="noopener noreferrer">Download CV</a>
+            <a className={classes.pdf} href='./media/CV_Dimitri-Devoille.pdf' target='_blank' rel="noopener noreferrer">{t('CV')}</a>
           </div>
         </div>
       </div>

@@ -43,7 +43,6 @@ const useStyles = makeStyles(() => ({
     },
     '@media (max-width: 600px)': {
       padding: '75px 0px',
-      alignItems: 'center',
     },
   },
   name: {
@@ -58,7 +57,6 @@ const useStyles = makeStyles(() => ({
       fontSize: '30px',
     },
     '@media (max-width: 400px)': {
-      textAlign: 'center',
     },
   },
   role: {
@@ -71,11 +69,12 @@ const useStyles = makeStyles(() => ({
       fontSize: '20px',
     },
     '@media (max-width: 600px)': {
-      textAlign: 'center',
-      padding: '50px 20px 50px 20px',
+      textAlign: 'left',
+      padding: '50px 0px 50px 0px',
     },
   },
   pdf: {
+    display: 'block',
     fontSize: '20px',
     border: '1px solid rgb(240, 240, 240)',
     padding: '15px 25px',

@@ -53,10 +53,21 @@ const useStyles = makeStyles(() => ({
     marginTop: '10px',
     fontSize: '30px',
   },
-  spanLanguages: {
-    margin: '15px',
+  languagesContainer: {
     cursor: 'pointer',
     fontSize: '20px',
+    display: 'flex',
+    justifyContent: 'space-evenly',
+    marginTop: '10px',
+  },
+  languages: {
+    margin: '0 25px',
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    '&:hover': {
+      color: 'rgb(240, 240, 240)',
+    },
   },
   navigation: {
     boxSizing: 'border-box',
@@ -64,7 +75,7 @@ const useStyles = makeStyles(() => ({
     flexDirection: 'column',
     justifyContent: 'space-between',
     listStyle: 'none',
-    paddingLeft: '20px',
+    paddingLeft: '40px',
     '@media (max-width: 900px)': {
       flexDirection: 'row',
       justifyContent: 'space-around',
@@ -173,11 +184,15 @@ const Navigation = () => {
       <header className={classes.idContent}>
         <img className={classes.profileImg} src={profilePicture} alt='profile' />
         <h1 className={classes.profile}>{profile}</h1>
-        <div className={classes.languages}>
-          <span className={classes.spanLanguages} onClick={() => dispatch(allActions.languageActions.setEnglish("en"))}>en</span>
-          <span className={classes.spanLanguages} onClick={() => dispatch(allActions.languageActions.setFrench("fr"))}>fr</span>
+        <div className={classes.languagesContainer}>
+          <div className={classes.languages} style={{ color: language === 'en' && 'rgba(240, 240, 240)' }}>
+            <span className={classes.spanLanguages} onClick={() => dispatch(allActions.languageActions.setEnglish("en"))}>en</span>
+          </div>
+          <div className={classes.languages} style={{ color: language === 'fr' && 'rgba(240, 240, 240)' }}>
+            <span className={classes.spanLanguages} onClick={() => dispatch(allActions.languageActions.setFrench("fr"))}>fr</span>
+          </div>
         </div>
-      </header>
+      </header >
       <nav>
         <ul className={classes.navigation}>
           <li className={classes.navItem}>

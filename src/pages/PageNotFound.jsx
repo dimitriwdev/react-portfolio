@@ -2,6 +2,7 @@ import React from 'react';
 import Navigation from '../components/Navigation';
 import bgMin from '../assets/bgMin.jpg';
 
+import { useTranslation } from "react-i18next";
 import { NavLink } from 'react-router-dom';
 import { makeStyles } from '@material-ui/core/styles';
 import ArrowBackIcon from '@material-ui/icons/ArrowBack';
@@ -64,6 +65,7 @@ const useStyles = makeStyles(() => ({
 
 const PageNotFound = () => {
   const classes = useStyles();
+  const { t } = useTranslation();
 
   const result = Math.random() * 10;
   let randomPage;
@@ -81,7 +83,7 @@ const PageNotFound = () => {
     <div className={classes.pageNotFound}>
       <Navigation />
       <div className={classes.content}>
-        <h2 className={classes.text}>Oops! Page not found</h2>
+        <h2 className={classes.text}>{t('PageNotFound')}</h2>
         <NavLink exact to={randomPage} className={classes.returnButton}><ArrowBackIcon className={classes.icon} /></NavLink>
       </div>
     </div >

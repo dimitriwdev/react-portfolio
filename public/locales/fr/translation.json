@@ -1,5 +1,5 @@
 {
-  "Home": "Acceuil",
+  "Home": "Accueil",
   "Knowledges": "Connaissances",
   "Portfolio": "Projets",
   "Contact": "Contact",
@@ -21,14 +21,18 @@
   "TodoApp": "App Todo",
   "MovieDB": "App Film",
 
-  "WeatherAppDesc": "Application Météo crée avec React, openWeatherApi, geolocation basée un custom hook et Material-ui.",
-  "ChatAppDesc": "Application de Chat crée avec React, React-chat-engine et Axios.",
-  "NasaAppDesc": "Application React crée avec un Api de la Nasa, Axios, React-lines-ellipsis, modale et Material-ui.",
-  "CountdownAppDesc": "Application Compte à rebours crée avec React, React-datepiker et DayJs.",
-  "TodoAppDesc": "Application Todo crée avec React et local storage.",
-  "MovieDbAppDesc": "Application de Film basee sur TMDB Api crée avec React et React-router-dom.",
+  "WeatherAppDesc": "Application Météo créée avec React, openWeatherApi, géolocalisation basée sur un custom hook et Material-ui.",
+  "ChatAppDesc": "Application de Chat créée avec React, React-chat-engine et Axios.",
+  "NasaAppDesc": "Application React créée avec NasaApi, Axios, React-lines-ellipsis, modale et Material-ui.",
+  "CountdownAppDesc": "Application Compte à rebours créée avec React, React-datepiker et DayJs.",
+  "TodoAppDesc": "Application Todo créée avec React et local storage.",
+  "MovieDbAppDesc": "Application de Film basée sur TMDB Api créée avec React et React-router-dom.",
+  "SeeMore": "Voir plus",
 
   "Name": "Nom",
   "Email": "Email",
-  "Message": "Message"
+  "Message": "Message",
+  "ErrorEmailJs": "Erreur d'envoi du message, merci de réessayer plus tard",
+
+  "PageNotFound": "Oops! La page n'a pas été trouvée"
 }

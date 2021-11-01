@@ -1,10 +1,13 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
+import useMediaQuery from "../customHooks/useMediaQuery";
+
 import { makeStyles } from '@material-ui/core/styles';
 import { NavLink } from 'react-router-dom';
 import HomeIcon from '@material-ui/icons/Home';
 import BarChartIcon from '@material-ui/icons/BarChart';
 import AspectRatioIcon from '@material-ui/icons/AspectRatio';
 import PermContactCalendarIcon from '@material-ui/icons/PermContactCalendar';
+import LanguageIcon from '@material-ui/icons/Language';
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import GitHubIcon from '@material-ui/icons/GitHub';
 import profilePicture from '../assets/profile.png';
@@ -59,6 +62,29 @@ const useStyles = makeStyles(() => ({
     display: 'flex',
     justifyContent: 'space-evenly',
     marginTop: '10px',
+    '@media (max-width: 900px)': {
+
+    },
+  },
+  languagesContainerMobile: {
+    cursor: 'pointer',
+    fontSize: '20px',
+    display: 'flex',
+    justifyContent: 'center',
+    marginRight: '20px',
+    '@media (max-width: 900px)': {
+      width: '20%',
+      justifyContent: 'center',
+      position: 'absolute',
+      right: 0,
+    },
+    '@media (max-width: 600px)': {
+      width: '30%',
+      marginRight: '0px',
+    },
+    '@media (max-width: 400px)': {
+      marginRight: '15px',
+    },
   },
   languages: {
     margin: '0 25px',
@@ -70,6 +96,7 @@ const useStyles = makeStyles(() => ({
     },
   },
   navigation: {
+    position: 'relative',
     boxSizing: 'border-box',
     display: 'flex',
     flexDirection: 'column',
@@ -95,6 +122,7 @@ const useStyles = makeStyles(() => ({
     },
   },
   navItem: {
+    cursor: 'pointer',
     padding: '15px 0',
     '@media (max-width: 600px)': {
       padding: '0px',
@@ -169,10 +197,16 @@ const Navigation = () => {
   const classes = useStyles();
   const year = new Date().getFullYear();
   const profile = 'Dimitri Devoille';
-
+  let isPageWide = useMediaQuery("(max-width:900px)");
+  const [languageToggle, setLanguageToggle] = useState(false);
   const language = useSelector((state) => state.languageReducers);
   const { t, i18n } = useTranslation();
   const dispatch = useDispatch();
+
+  const handleLanguageToggle = () => {
+    setLanguageToggle(!languageToggle);
+  }
+
 
   useEffect(() => {
     i18n.changeLanguage(language);
@@ -219,7 +253,24 @@ const Navigation = () => {
               <span className={classes.navigationLink}>{t('Contact')}</span>
             </NavLink>
           </li>
+          {isPageWide &&
+            <div className={classes.link} onClick={handleLanguageToggle}>
+              <li className={classes.navItem}>
+                <LanguageIcon className={classes.icon} />
+              </li>
+            </div>
+          }
         </ul>
+        {
+          languageToggle && <div className={classes.languagesContainerMobile}>
+            <div className={classes.languages} style={{ color: language === 'en' && 'rgba(240, 240, 240)' }}>
+              <span className={classes.spanLanguages} onClick={() => { setLanguageToggle(false); dispatch(allActions.languageActions.setEnglish("en")) }}>en</span>
+            </div>
+            <div className={classes.languages} style={{ color: language === 'fr' && 'rgba(240, 240, 240)' }}>
+              <span className={classes.spanLanguages} onClick={() => { setLanguageToggle(false); dispatch(allActions.languageActions.setFrench("fr")) }}>fr</span>
+            </div>
+          </div>
+        }
       </nav>
       <div className={classes.socialContent}>
         <div className={classes.social}>

@@ -142,6 +142,9 @@ const useStyles = makeStyles(() => ({
   visuallyHidden: {
     display: 'none',
   },
+  errorMessage: {
+    color: '#f00',
+  },
 }))
 
 const Form = () => {
@@ -151,6 +154,7 @@ const Form = () => {
 
   const [result, setResult] = useState(false);
   const [isVerified, setIsVerified] = useState(false);
+  const [error, setError] = useState('');
 
   const userKey = process.env.REACT_APP_EMAILJS_USER_KEY;
   const templateKey = process.env.REACT_APP_EMAILJS_TEMPLATE_KEY;
@@ -168,12 +172,14 @@ const Form = () => {
 
   const sendEmail = (e) => {
     e.preventDefault();
-
+    setResult(false);
     emailjs.sendForm(serviceKey, templateKey, form.current, userKey)
       .then((result) => {
         console.log(result.text);
+        setError('');
       }, (error) => {
         console.log(error.text);
+        setError(`${t('ErrorEmailJs')}`);
       });
     form.current.reset();
     setIsVerified(false);
@@ -235,7 +241,7 @@ const Form = () => {
             {result ? <CheckIcon /> : <MailOutlineIcon />}
           </button>
         </div>
-
+        {error && <p className={classes.errorMessage}>{error}</p>}
       </form >
     </div>
   )

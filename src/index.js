@@ -2,6 +2,8 @@ import React, { Suspense, StrictMode } from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
+import Loader from './components/Loader';
+
 import { Provider } from "react-redux";
 import { createStore } from "redux";
 import rootReducer from "./reducers";
@@ -14,7 +16,7 @@ const store = createStore(
 ReactDOM.render(
   <StrictMode>
     <Provider store={store}>
-      <Suspense fallback={<div>Loading...</div>}>
+      <Suspense fallback={<Loader />}>
         <App />
       </Suspense>
     </Provider>

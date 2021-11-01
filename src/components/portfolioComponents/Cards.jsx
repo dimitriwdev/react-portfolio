@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import Modal from './Modal';
 
 import { makeStyles } from '@material-ui/core/styles';
+import { useTranslation } from "react-i18next";
 import Grid from '@material-ui/core/Grid';
 import Box from '@material-ui/core/Box';
 import LinesEllipsis from "react-lines-ellipsis";
@@ -66,6 +67,7 @@ const useStyles = makeStyles(() => ({
 
 const Cards = (props) => {
   const classes = useStyles();
+  const { t } = useTranslation();
   const { card } = props;
   const [toggleModal, setToggleModal] = useState(false);
 
@@ -99,7 +101,7 @@ const Cards = (props) => {
               basedOn="letters"
               maxLine={2}
             />
-            <span className={classes.moreBtn}>See more</span>
+            <span className={classes.moreBtn}>{t('SeeMore')}</span>
           </Grid>
 
         </Grid>

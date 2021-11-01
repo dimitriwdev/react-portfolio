@@ -28,8 +28,12 @@
   "TodoAppDesc": "Todo application built with React and local storage.",
   "MovieDbAppDesc": "React movie application using TMDB Api and React-router-dom.",
 
+  "SeeMore": "See more",
 
   "Name": "Name",
   "Email": "Email",
-  "Message": "Message"
+  "Message": "Message",
+  "ErrorEmailJs": "Something goes wrong, try again later",
+
+  "PageNotFound": "Oops! Page not found"
 }

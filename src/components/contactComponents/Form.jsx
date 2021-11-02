@@ -172,7 +172,6 @@ const Form = () => {
 
   const sendEmail = (e) => {
     e.preventDefault();
-    setResult(false);
     emailjs.sendForm(serviceKey, templateKey, form.current, userKey)
       .then((result) => {
         console.log(result.text);

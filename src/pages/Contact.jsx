@@ -1,8 +1,9 @@
 import React from 'react';
 import Navigation from '../components/Navigation';
-import bgMin from '../assets/bgMin.jpg';
+import bg from '../assets/bg.webp';
 import Form from '../components/contactComponents/Form';
 import FormDetails from '../components/contactComponents/FormDetails';
+
 import { makeStyles } from '@material-ui/core/styles';
 
 const useStyles = makeStyles(() => ({
@@ -10,7 +11,7 @@ const useStyles = makeStyles(() => ({
     width: '100%',
     minHeight: '100vh',
     display: 'flex',
-    background: `linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)),url(${bgMin})`,
+    background: `linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)),url(${bg})`,
     // Photo by Karsten Würth on unsplash
     backgroundPosition: 'center',
     backgroundSize: 'cover',

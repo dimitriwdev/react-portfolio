@@ -10,7 +10,7 @@ import PermContactCalendarIcon from '@material-ui/icons/PermContactCalendar';
 import LanguageIcon from '@material-ui/icons/Language';
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import GitHubIcon from '@material-ui/icons/GitHub';
-import profilePicture from '../assets/profile.png';
+import profilePicture from '../assets/profile.webp';
 import { useTranslation } from "react-i18next";
 import { useSelector, useDispatch } from "react-redux";
 import allActions from "../actions";
@@ -206,11 +206,9 @@ const Navigation = () => {
     setLanguageToggle(!languageToggle);
   }
 
-
   useEffect(() => {
     i18n.changeLanguage(language);
   }, [language, i18n]);
-
 
   return (
     <div className={classes.sidebar}>

@@ -1,12 +1,12 @@
 import React from 'react';
 import Navigation from '../components/Navigation';
-import bgMin from '../assets/bgMin.jpg';
-import weatherApp from '../assets/portfolioImages/weatherApp.png';
-import nasaApp from '../assets/portfolioImages/nasaApp.png';
-import chatApp from '../assets/portfolioImages/chatApp.png';
-import countdownApp from '../assets/portfolioImages/countdownApp.png';
-import todoApp from '../assets/portfolioImages/todoApp.png';
-import movieDb from '../assets/portfolioImages/movieDb.png';
+import bg from '../assets/bg.webp';
+import weatherApp from '../assets/portfolioImages/weatherApp.webp';
+import nasaApp from '../assets/portfolioImages/nasaApp.webp';
+import chatApp from '../assets/portfolioImages/chatApp.webp';
+import countdownApp from '../assets/portfolioImages/countdownApp.webp';
+import todoApp from '../assets/portfolioImages/todoApp.webp';
+import movieDb from '../assets/portfolioImages/movieDb.webp';
 import Cards from '../components/portfolioComponents/Cards';
 
 import { useTranslation } from "react-i18next";
@@ -18,7 +18,7 @@ const useStyles = makeStyles(() => ({
     width: '100%',
     minHeight: '100vh',
     display: 'flex',
-    background: `linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)),url(${bgMin})`,
+    background: `linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)),url(${bg})`,
     // Photo by Karsten Würth on unsplash
     backgroundPosition: 'center',
     backgroundSize: 'cover',

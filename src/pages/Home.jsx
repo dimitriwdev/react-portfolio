@@ -4,6 +4,7 @@ import bg from '../assets/bg.webp';
 
 import { useTranslation } from "react-i18next";
 import { makeStyles } from '@material-ui/core/styles';
+import { useSelector } from "react-redux";
 
 const useStyles = makeStyles(() => ({
   home: {
@@ -94,6 +95,16 @@ const useStyles = makeStyles(() => ({
 const Home = () => {
   const classes = useStyles();
   const { t } = useTranslation();
+  const language = useSelector((state) => state.languageReducers);
+  // console.log(language);
+
+  let cvLink;
+
+  if (language === 'fr') {
+    cvLink = './media/CV_Dimitri-Devoille_fr.pdf'
+  } else {
+    cvLink = './media/CV_Dimitri-Devoille_eng.pdf'
+  }
 
   return (
     <div className={classes.home}>
@@ -107,7 +118,7 @@ const Home = () => {
             {t('Role')}
           </h3>
           <div>
-            <a className={classes.pdf} href='./media/CV_Dimitri-Devoille.pdf' target='_blank' rel="noopener noreferrer">{t('CV')}</a>
+            <a className={classes.pdf} href={cvLink} target='_blank' rel="noopener noreferrer">{t('CV')}</a>
           </div>
         </div>
       </div>

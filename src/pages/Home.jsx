@@ -96,8 +96,6 @@ const Home = () => {
   const classes = useStyles();
   const { t } = useTranslation();
   const language = useSelector((state) => state.languageReducers);
-  // console.log(language);
-
   let cvLink;
 
   if (language === 'fr') {

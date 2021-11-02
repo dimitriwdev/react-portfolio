@@ -63,8 +63,7 @@ const useStyles = makeStyles(() => ({
   },
   role: {
     fontSize: '30px',
-    padding: '35px 0 120px 0',
-    margin: 0,
+    margin: '35px 0 120px 0',
     letterSpacing: '0.1rem',
     textShadow: '1px 4px 1px #000',
     '@media (max-width: 1130px)': {
@@ -72,11 +71,13 @@ const useStyles = makeStyles(() => ({
     },
     '@media (max-width: 600px)': {
       textAlign: 'left',
-      padding: '50px 0px 50px 0px',
+      margin: '50px 0px 50px 0px',
     },
   },
   pdf: {
-    display: 'block',
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
     fontSize: '20px',
     border: '1px solid rgb(240, 240, 240)',
     padding: '15px 25px',
@@ -99,9 +100,9 @@ const Home = () => {
   let cvLink;
 
   if (language === 'fr') {
-    cvLink = './media/CV_Dimitri-Devoille_fr.pdf'
+    cvLink = './media/CV_Dimitri-Devoille_fr.pdf';
   } else {
-    cvLink = './media/CV_Dimitri-Devoille_eng.pdf'
+    cvLink = './media/CV_Dimitri-Devoille_eng.pdf';
   }
 
   return (

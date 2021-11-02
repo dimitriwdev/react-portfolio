@@ -42,18 +42,11 @@ const useStyles = makeStyles(() => ({
     },
   },
   cardImgOverlay: {
-    width: '100%',
-    height: '150px',
-    borderRadius: '5px',
     backgroundColor: 'rgba(2, 37, 51, 0.35)',
-    margin: '10px 0',
     transition: '0.3s ease',
-    '@media (max-width: 600px)': {
-      backgroundColor: 'rgba(2, 37, 51, 0.2)',
-      height: '170px',
-    },
   },
   moreBtn: {
+    display: 'block',
     fontStyle: 'italic',
     fontSize: '16px',
     padding: '5px',
@@ -90,7 +83,7 @@ const Cards = (props) => {
               }}
               className={classes.cardImg}
             >
-              <div className={classes.cardImgOverlay}>
+              <div className={`${classes.cardImg} ${classes.cardImgOverlay}`}>
               </div>
             </div>
           </Grid>

@@ -3,10 +3,10 @@ import { makeStyles } from '@material-ui/core/styles';
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import GitHubIcon from '@material-ui/icons/GitHub';
 import AccountBoxIcon from '@material-ui/icons/AccountBox';
+import CodeIcon from '@material-ui/icons/Code';
 
 const useStyles = makeStyles(() => ({
   social: {
-    display: 'none',
     width: '100%',
     '@media (max-width: 900px)': {
       display: 'flex',
@@ -33,6 +33,15 @@ const SocialContact = () => {
   return (
     <div className={classes.social}>
       <a
+        href='./media/CV_Dimitri-Devoille.pdf'
+        target='_blank'
+        rel="noopener noreferrer"
+        aria-hidden="true"
+      >
+        <span className={classes.visuallyHidden}>cv</span>
+        <AccountBoxIcon className={classes.socialIcon} />
+      </a>
+      <a
         href='http://www.linkedin.com/in/dimitridevoille'
         target='_blank'
         rel='noopener noreferrer'
@@ -48,16 +57,16 @@ const SocialContact = () => {
         aria-hidden="true"
       >
         <span className={classes.visuallyHidden}>github</span>
-        <GitHubIcon className={classes.socialIcon} />
+        <GitHubIcon className={classes.socialIcon} style={{ fontSize: '22px', }} />
       </a>
       <a
-        href='./media/CV_Dimitri-Devoille.pdf'
+        href='https://github.com/dimitriwdev/react-portfolio'
         target='_blank'
         rel="noopener noreferrer"
         aria-hidden="true"
       >
-        <span className={classes.visuallyHidden}>cv</span>
-        <AccountBoxIcon className={classes.socialIcon} />
+        <span className={classes.visuallyHidden}>code</span>
+        <CodeIcon className={classes.socialIcon} />
       </a>
     </div>
   )

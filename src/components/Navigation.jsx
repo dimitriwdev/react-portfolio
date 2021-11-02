@@ -10,6 +10,7 @@ import PermContactCalendarIcon from '@material-ui/icons/PermContactCalendar';
 import LanguageIcon from '@material-ui/icons/Language';
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import GitHubIcon from '@material-ui/icons/GitHub';
+import CodeIcon from '@material-ui/icons/Code';
 import profilePicture from '../assets/profile.webp';
 import { useTranslation } from "react-i18next";
 import { useSelector, useDispatch } from "react-redux";
@@ -167,7 +168,7 @@ const useStyles = makeStyles(() => ({
   },
   socialIcon: {
     color: '#6BA1B9',
-    fontSize: '50px',
+    fontSize: '40px',
     padding: '7px',
     border: '1px solid #6BA1B9',
     display: 'flex',
@@ -196,7 +197,7 @@ const Navigation = () => {
   const classes = useStyles();
   const year = new Date().getFullYear();
   const profile = 'Dimitri Devoille';
-  let isPageWide = useMediaQuery("(max-width:900px)");
+  let isModileSize = useMediaQuery("(max-width:900px)");
   const [languageToggle, setLanguageToggle] = useState(false);
   const language = useSelector((state) => state.languageReducers);
   const { t, i18n } = useTranslation();
@@ -250,7 +251,7 @@ const Navigation = () => {
               <span className={classes.navigationLink}>{t('Contact')}</span>
             </NavLink>
           </li>
-          {isPageWide &&
+          {isModileSize &&
             <div className={classes.link} onClick={handleLanguageToggle}>
               <li className={classes.navItem}>
                 <LanguageIcon className={classes.icon} />
@@ -288,6 +289,15 @@ const Navigation = () => {
           >
             <span className={classes.visuallyHidden}>github</span>
             <GitHubIcon className={classes.socialIcon} />
+          </a>
+          <a
+            href='https://github.com/dimitriwdev/react-portfolio'
+            target='_blank'
+            rel="noopener noreferrer"
+            aria-hidden="true"
+          >
+            <span className={classes.visuallyHidden}>code</span>
+            <CodeIcon className={classes.socialIcon} />
           </a>
         </div>
         <span className={classes.signature}><i>{profile} - {year}</i></span>

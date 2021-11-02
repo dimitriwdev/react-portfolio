@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import SocialContact from './SocialContact';
+import useMediaQuery from "../../customHooks/useMediaQuery";
 
 import CopyToClipboard from 'react-copy-to-clipboard';
 import { makeStyles } from '@material-ui/core/styles';
@@ -85,6 +86,7 @@ const useStyles = makeStyles(() => ({
 const FormDetails = () => {
   const classes = useStyles();
   const initialValue = 'Copy to Clipbaord';
+  let isModileSize = useMediaQuery("(max-width:900px)");
   const [tooltip, setTooltip] = useState(initialValue)
 
   const handleTooltip = (e) => {
@@ -112,7 +114,7 @@ const FormDetails = () => {
             Dublin
           </p>
         </div>
-        <SocialContact />
+        {isModileSize && <SocialContact />}
       </div>
     </div >
   )

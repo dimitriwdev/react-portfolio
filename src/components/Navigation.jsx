@@ -74,7 +74,6 @@ const useStyles = makeStyles(() => ({
     marginRight: '20px',
     '@media (max-width: 900px)': {
       width: '20%',
-      justifyContent: 'center',
       position: 'absolute',
       right: 0,
     },

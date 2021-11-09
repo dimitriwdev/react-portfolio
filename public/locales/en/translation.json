@@ -25,7 +25,7 @@
   "ChatAppDesc": "Chat application created with React, React-chat-engine and Axios.",
   "NasaAppDesc": "React app built using Nasa Api, Axios, React-lines-ellipsis, modal box and Material-ui.",
   "CountdownAppDesc": "Countdown application created with React, React-datepiker and DayJs.",
-  "TodoAppDesc": "Todo application built with React and local storage.",
+  "TodoAppDesc": "Todo application built with React and Firebase.",
   "MovieDbAppDesc": "React movie application using TMDB Api and React-router-dom.",
 
   "SeeMore": "See more",

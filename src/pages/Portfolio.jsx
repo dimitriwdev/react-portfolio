@@ -5,7 +5,7 @@ import weatherApp from '../assets/portfolioImages/weatherApp.webp';
 import nasaApp from '../assets/portfolioImages/nasaApp.webp';
 import chatApp from '../assets/portfolioImages/chatApp.webp';
 import countdownApp from '../assets/portfolioImages/countdownApp.webp';
-import todoApp from '../assets/portfolioImages/todoApp.webp';
+import todofirebase from '../assets/portfolioImages/todofirebase.webp';
 import movieDb from '../assets/portfolioImages/movieDb.webp';
 import Cards from '../components/portfolioComponents/Cards';
 
@@ -79,9 +79,9 @@ const Portfolio = () => {
       id: 5,
       name: `${t('TodoApp')}`,
       desc: `${t('TodoAppDesc')}`,
-      img: `${todoApp}`,
-      github: 'https://github.com/dimitriwdev/react-todo-app',
-      app: 'https://friendly-gates-5170e3.netlify.app/'
+      img: `${todofirebase}`,
+      github: 'https://github.com/dimitriwdev/react-firebase-todo',
+      app: 'https://lucid-goldberg-6519de.netlify.app/'
     },
     {
       id: 6,

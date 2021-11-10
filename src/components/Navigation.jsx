@@ -24,13 +24,16 @@ const useStyles = makeStyles(() => ({
     width: "300px",
     height: "100vh",
     color: "#6BA1B9",
-    padding: "0 20px",
+    padding: "20px",
     display: "flex",
     flexDirection: "column",
     justifyContent: "space-between",
     fontFamily: "Caveat",
     "@media (max-width: 1130px)": {
       margin: 0,
+    },
+    "@media (max-height: 800px)": {
+      padding: "0 20px",
     },
     "@media (max-width: 900px)": {
       width: "100vw",

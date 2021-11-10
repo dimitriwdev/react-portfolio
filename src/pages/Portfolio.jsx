@@ -35,6 +35,7 @@ const useStyles = makeStyles(() => ({
     marginLeft: "300px",
     "@media (max-width: 900px)": {
       padding: "20px 20px 20px 20px",
+      marginLeft: "0px",
     },
   },
 }));

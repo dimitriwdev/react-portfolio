@@ -32,14 +32,15 @@ const useStyles = makeStyles(() => ({
     "@media (max-width: 1130px)": {
       margin: 0,
     },
-    "@media (max-height: 800px)": {
-      padding: "0 20px",
-    },
     "@media (max-width: 900px)": {
+      position: "relative",
       width: "100vw",
-      minHeight: "50px",
+      height: "50px",
       margin: "0 0 20px 0",
       padding: 0,
+    },
+    "@media (max-height: 800px)": {
+      padding: "0 20px",
     },
   },
   idContent: {

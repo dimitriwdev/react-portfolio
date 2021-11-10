@@ -26,6 +26,9 @@ const useStyles = makeStyles(() => ({
     width: "100%",
     marginLeft: "300px",
     padding: "40px",
+    "@media (max-width: 900px)": {
+      marginLeft: "0px",
+    },
     "@media (max-width: 600px)": {
       padding: "20px",
     },
@@ -45,7 +48,7 @@ const useStyles = makeStyles(() => ({
       padding: "75px 60px",
     },
     "@media (max-width: 600px)": {
-      padding: "75px 0px",
+      padding: "75px 20px",
     },
   },
   name: {

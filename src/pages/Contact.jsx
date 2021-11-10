@@ -31,6 +31,9 @@ const useStyles = makeStyles(() => ({
     "@media (max-width: 1200px)": {
       padding: "20px",
     },
+    "@media (max-width: 900px)": {
+      marginLeft: "0px",
+    },
   },
   formDetailsContainer: {
     width: "100%",

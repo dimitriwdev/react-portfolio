@@ -3,7 +3,7 @@ import { initReactI18next } from "react-i18next";
 import Backend from "i18next-xhr-backend";
 import LanguageDetector from "i18next-browser-languagedetector";
 
-const languages = ["en", "fr"];
+const languages = ["fr", "en"];
 i18n
   .use(Backend)
 
@@ -12,7 +12,7 @@ i18n
   .use(initReactI18next)
 
   .init({
-    fallbackLng: "en",
+    fallbackLng: "fr",
     debug: false,
     whitelist: languages,
 

@@ -1,11 +1,11 @@
-const initialState = "en";
+const initialState = "fr";
 
 const languageReducers = (state = initialState, action) => {
   switch (action.type) {
-    case "SET_ENGLISH":
-      return initialState;
     case "SET_FRENCH":
-      return "fr";
+      return initialState;
+    case "SET_ENGLISH":
+      return "en";
     default:
       return initialState;
   }

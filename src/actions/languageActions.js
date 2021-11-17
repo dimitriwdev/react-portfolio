@@ -1,18 +1,18 @@
-const setEnglish = () => {
-  return {
-    type: "SET_ENGLISH"
-  };
-};
-
 const setFrench = () => {
   return {
     type: "SET_FRENCH"
   };
 };
 
+const setEnglish = () => {
+  return {
+    type: "SET_ENGLISH"
+  };
+};
+
 const setLanguage = {
-  setEnglish,
-  setFrench
+  setFrench,
+  setEnglish
 };
 
 export default setLanguage;

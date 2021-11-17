@@ -202,7 +202,8 @@ const Navigation = () => {
   const classes = useStyles();
   const year = new Date().getFullYear();
   const profile = "Dimitri Devoille";
-  let isModileSize = useMediaQuery("(max-width:900px)");
+  let isMobileSize = useMediaQuery("(max-width:900px)");
+  
   const [languageToggle, setLanguageToggle] = useState(false);
   const language = useSelector((state) => state.languageReducers);
   const { t, i18n } = useTranslation();
@@ -228,19 +229,6 @@ const Navigation = () => {
         <div className={classes.languagesContainer}>
           <div
             className={classes.languages}
-            style={{ color: language === "en" && "rgba(240, 240, 240)" }}
-          >
-            <span
-              className={classes.spanLanguages}
-              onClick={() =>
-                dispatch(allActions.languageActions.setEnglish("en"))
-              }
-            >
-              en
-            </span>
-          </div>
-          <div
-            className={classes.languages}
             style={{ color: language === "fr" && "rgba(240, 240, 240)" }}
           >
             <span
@@ -250,6 +238,20 @@ const Navigation = () => {
               }
             >
               fr
+            </span>
+          </div>
+          <div
+            className={classes.languages}
+            style={{ color: language === "en" && "rgba(240, 240, 240)" }}
+          >
+            
+            <span
+              className={classes.spanLanguages}
+              onClick={() =>
+                dispatch(allActions.languageActions.setEnglish("en"))
+              }
+            >
+              en
             </span>
           </div>
         </div>
@@ -300,7 +302,7 @@ const Navigation = () => {
               <span className={classes.navigationLink}>{t("Contact")}</span>
             </NavLink>
           </li>
-          {isModileSize && (
+          {isMobileSize && (
             <div className={classes.link} onClick={handleLanguageToggle}>
               <li className={classes.navItem}>
                 <LanguageIcon className={classes.icon} />

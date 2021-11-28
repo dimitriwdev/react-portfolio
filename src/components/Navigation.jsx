@@ -130,7 +130,6 @@ const useStyles = makeStyles(() => ({
     cursor: "pointer",
     padding: "15px 0",
     "@media (max-width: 600px)": {
-      padding: "0px",
       width: "20px",
     },
   },

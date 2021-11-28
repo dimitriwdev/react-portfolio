@@ -203,7 +203,7 @@ const Navigation = () => {
   const year = new Date().getFullYear();
   const profile = "Dimitri Devoille";
   let isMobileSize = useMediaQuery("(max-width:900px)");
-  
+
   const [languageToggle, setLanguageToggle] = useState(false);
   const language = useSelector((state) => state.languageReducers);
   const { t, i18n } = useTranslation();
@@ -244,7 +244,6 @@ const Navigation = () => {
             className={classes.languages}
             style={{ color: language === "en" && "rgba(240, 240, 240)" }}
           >
-            
             <span
               className={classes.spanLanguages}
               onClick={() =>
@@ -314,20 +313,6 @@ const Navigation = () => {
           <div className={classes.languagesContainerMobile}>
             <div
               className={classes.languages}
-              style={{ color: language === "en" && "rgba(240, 240, 240)" }}
-            >
-              <span
-                className={classes.spanLanguages}
-                onClick={() => {
-                  setLanguageToggle(false);
-                  dispatch(allActions.languageActions.setEnglish("en"));
-                }}
-              >
-                en
-              </span>
-            </div>
-            <div
-              className={classes.languages}
               style={{ color: language === "fr" && "rgba(240, 240, 240)" }}
             >
               <span
@@ -338,6 +323,20 @@ const Navigation = () => {
                 }}
               >
                 fr
+              </span>
+            </div>
+            <div
+              className={classes.languages}
+              style={{ color: language === "en" && "rgba(240, 240, 240)" }}
+            >
+              <span
+                className={classes.spanLanguages}
+                onClick={() => {
+                  setLanguageToggle(false);
+                  dispatch(allActions.languageActions.setEnglish("en"));
+                }}
+              >
+                en
               </span>
             </div>
           </div>
